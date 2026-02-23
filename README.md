@@ -8,15 +8,15 @@ This repository contains the AI component MVP for our course project. The system
 
 The core of this MVP is Faster R-CNN with a ResNet-50 backbone. 
 
+### Training Process
+
 The model was trained in two phases using FLIR ADAS v2 Dataset: https://oem.flir.com/solutions/automotive/adas-dataset-form
 
 Phase 1: 10 epochs of training on 10318 RGB images to learn high-resolution human features. 
 
 Phase 2: 5 epochs of fine tuning on combined dataset (21060 images) of RGB and thermal signatures to ensure robustness. 
 
-
-Based on the teachers suggestions I decided to move away from using the methods listed in our deliverable 1 and used CNNs. 
-
+While our initial proposal suggested Decision Trees and Logistic Regression, we transitioned to Convolutional Neural Networks (CNNs) to better handle the complex spatial features found in aerial thermal imagery
 
 15 epochs of training total is not a whole lot and based on the amount of data available I would have liked to run it for 60 epochs. I tried to achieve this using Puhti supercomputer but the dataset got messed up during the uploading to Puhti making it not possible to train the model. 
 
